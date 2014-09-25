@@ -21,6 +21,7 @@ $(document).ready(function() {
 
     lms.keypress(checkButtonEnable);
     lms.change(checkButtonEnable);
+    checkButtonEnable();
 
     launch.click(function() {
         var host = lms.val();
