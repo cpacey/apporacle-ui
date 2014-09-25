@@ -11,6 +11,10 @@ $(document).ready(function() {
 
     var lms = $('#lms');
 
+    if (localStorage.host) {
+        lms.val(localStorage.host);
+    }
+
     function checkButtonEnable() {
         launch.attr('disabled', !lms.val());
     }
@@ -19,8 +23,12 @@ $(document).ready(function() {
     lms.change(checkButtonEnable);
 
     launch.click(function() {
+        var host = lms.val();
+
+        localStorage.host = host;
+
         var uri = new URI(
-            lms.val() + '/d2l/appsDev/' + key + '/' + version + '/'
+            host + '/d2l/appsDev/' + key + '/' + version + '/'
         ).normalize();
 
         window.location.href =uri;
