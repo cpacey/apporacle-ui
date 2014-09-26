@@ -13,6 +13,7 @@ $(document).ready(function() {
     $('#version').html(version);
 
     var lms = $('#lms');
+
     if (localStorage.host) {
         lms.val(localStorage.host);
     }
@@ -21,7 +22,6 @@ $(document).ready(function() {
         launch.attr('disabled', !lms.val());
     }
 
-    checkButtonEnable();
     lms.keypress(checkButtonEnable);
     lms.change(checkButtonEnable);
 
