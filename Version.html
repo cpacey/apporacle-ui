@@ -4,10 +4,17 @@
 	</head>
 	<body class="vui-typography">
 		<div>
-			Lms location
-			<input type="text" id="lms" placeholder="http://lms.someplace.com:8000" style="width:300px;" />
-			<br/>
-			<input type="button" id="launch" value="Launch in Lms" disabled="true" class="vui-button vui-button-primary" />
+			<div>
+				<div>Key: <span id="key"></span></div>
+				<div>Version: <span id="version"></span></div>
+			</div>
+			<hr/>
+			<div>
+				Lms location
+				<input type="text" id="lms" placeholder="http://lms.someplace.com:8000" style="width:300px;" />
+				<br/>
+				<input type="button" id="launch" value="Launch in Lms" disabled="true" class="vui-button vui-button-primary" />
+			</div>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

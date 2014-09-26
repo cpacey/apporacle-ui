@@ -7,6 +7,9 @@ $(document).ready(function() {
 
     if (!key || !version) {
         launch.val('Missing key or version');
+    } else {
+        $('#key').html(key);
+        $('#version').html(version);
     }
 
     var lms = $('#lms');
@@ -16,7 +19,8 @@ $(document).ready(function() {
     }
 
     function checkButtonEnable() {
-        launch.attr('disabled', !lms.val());
+        var disabled = !lms.val() || !key || !version;
+        launch.attr('disabled', disabled);
     }
 
     lms.keypress(checkButtonEnable);
