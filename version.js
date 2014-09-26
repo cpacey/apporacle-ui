@@ -9,9 +9,6 @@ $(document).ready(function() {
         launch.val('Missing key or version');
     }
 
-    $('#key').html(key);
-    $('#version').html(version);
-
     var lms = $('#lms');
 
     if (localStorage.host) {
